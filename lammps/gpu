@@ -1,0 +1,14 @@
+#%Module1.0
+
+# Copyright (c) 2021, NVIDIA CORPORATION.  All rights reserved.
+#
+# NVIDIA CORPORATION and its licensors retain all intellectual property
+# and proprietary rights in and to this software, related documentation
+# and any modifications thereto.  Any use, reproduction, disclosure or
+# distribution of this software and related documentation without an express
+# license agreement from NVIDIA CORPORATION is strictly prohibited.
+prepend-path PATH /home/dx/app/lammps-gpu/bin
+prepend-path LD_LIBRARY_PATH /opt/rocm-4.3.0/llvm/lib
+module load openmpi/rocm
+#alias lammps32="mpirun -n 32 lmp -in lmp.in"
+#alias lammps8="mpirun -n 8 lmp -in lmp.in"

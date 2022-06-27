@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis "An open source Message Passing Interface implementation."
+
+
+prepend-path LD_LIBRARY_PATH "/home/dx/app/openmpi414-clang/lib"
+prepend-path PATH "/home/dx/app/openmpi414-clang/bin"
+prepend-path MANPATH "/home/dx/app/openmpi414-clang/share/man"
+prepend-path PKG_CONFIG_PATH "/home/dx/app/openmpi414-clang/lib/pkgconfig"
+prepend-path CMAKE_PREFIX_PATH "/home/dx/app/openmpi414-clang/"
+setenv MPICC "/home/dx/app/openmpi414-clang/bin/mpicc"
+setenv MPICXX "/home/dx/app/openmpi414-clang/bin/mpic++"
+setenv MPIF77 "/home/dx/app/openmpi414-clang/bin/mpif77"
+setenv MPIF90 "/home/dx/app/openmpi414-clang/bin/mpif90"
+
