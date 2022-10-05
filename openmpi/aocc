@@ -6,9 +6,19 @@ proc ModulesHelp { } {
 }
 
 module-whatis "loads AOCC compiler setup "
+conflict  intel-mpi-compiler-2019
+
 set aocl_dir /home/app/source/aocl-linux-aocc-3.2.0/3.2.0
 set AOCChome /home/app/source/aocc-compiler-3.2.0
+set                 ompidir                 /home/app/openmpi-4.1.1
 
+
+setenv LANG     en_US.UTF-8
+setenv LC_ALL   en_US
+prepend-path        PATH                   $ompidir/bin
+prepend-path        LIBRARY_PATH           $ompidir/lib
+prepend-path        LD_LIBRARY_PATH        $ompidir/lib:$topdir/libexec:$topdir/lib/openmpi:$topdir/lib/pmix
+prepend-path        MANPATH                $ompidir/share/man
 
 setenv AOCL_ROOT $aocl_dir
 prepend-path LD_LIBRARY_PATH $aocl_dir/lib
